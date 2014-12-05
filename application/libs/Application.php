@@ -15,18 +15,14 @@ class Application {
 			require './application/controleur/' . $this->url_controller . '.php';
 			$controleur = new $this->url_controller();
 			if (method_exists($controleur, $this->url_action)) {
-				if (isset($this->url_args)) {
-					$controleur->{$this->url_action}($this->url_args);
-				} else {
-					$controleur->{$this->url_action}();
-				}
+				$controleur->{$this->url_action}($this->url_args);
 			} else {
-				$controleur->index();
+				$controleur->index($this->url_args);
 			}
 		} else {
-			require './application/controleur/index.php';
-			$home = new Index();
-			$home->index();
+			require './application/controleur/home.php';
+			$home = new Home();
+			$home->index(null);
 		}
 	}
 	private function splitUrl()
@@ -40,7 +36,7 @@ class Application {
 			$this->url_action = (isset($url[1]) ? $url[1] : null);
 			array_shift($url);
 			array_shift($url);
-			$this->url_args = $url;
+			$this->url_args = (empty($url))?null:$url;
 		}
 	}
 }

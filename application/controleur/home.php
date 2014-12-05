@@ -7,21 +7,21 @@ class Home extends Controleur{
 	
 	public function __construct() {  }
 	
-	public function index()
+	public function index($args)
 	{
 		$url_appli = 'home';
 		require 'application/vue/_template/header.php';
 		require 'application/vue/home/index.php';
 		require 'application/vue/_template/footer.php';
 	}
-	public function about()
+	public function about($args)
 	{
 		$url_appli = 'home/about';
 		require 'application/vue/_template/header.php';
 		require 'application/vue/home/about.php';
 		require 'application/vue/_template/footer.php';
 	}
-	public function contact()
+	public function contact($args)
 	{
 		$url_appli = 'home/contact';
 		require_once 'application/vue/_template/header.php';
