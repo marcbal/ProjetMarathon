@@ -4,22 +4,28 @@
 * @link https://github.com/panique/php-mvc
 */
 class Controleur {
-	public $db = null;
+	public static $dbAdapter = null;
+	public static $CRUDAdapter = null; 
 	function __construct()
 	{
-		$this->openDatabaseConnexion();
 	}
 	
 	private function openDatabaseConnexion()
 	{
-		$options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
-		$this->db = new PDO(DB_TYPE . ':host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS, $options);
+		self::$dbAdapter = new PDODBAdapter(DB_HOST, DB_NAME, DB_USER, DB_PASS);
+		self::$CRUDAdapter = new PDOCRUDAdapter(self::$dbAdapter);
 	}
 	
-	public function loadModel($model_name)
+	/**
+	* charge le modèle corresponda
+	*/
+	
+	public function loadModel($dbAdapterName)
 	{
-		require_once('application/modele/' . strtolower($model_name) . '.php');
-		return new $model_name($this->db);
+		if (self::$dbAdapter === null)
+			$this->openDatabaseConnexion();
+		require_once('application/modele/mymodel/queries/' . strtolower($dbAdapterName) . 'SQL.class.php');
+		require_once('application/modele/mymodel/tables/' . strtolower($dbAdapterName) . '.class.php');
 	}
 	
 	public function __toString() {

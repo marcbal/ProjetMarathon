@@ -10,6 +10,14 @@ class Home extends Controleur{
 	public function index($args)
 	{
 		$url_appli = 'home';
+		parent::loadModel('tache');
+		$tSQL = new TacheSQL();
+		$t = new Tache("bouh", "machin", "", "");
+		
+		
+		
+		
+		
 		require 'application/vue/_template/header.php';
 		require 'application/vue/home/index.php';
 		require 'application/vue/_template/footer.php';
