@@ -16,10 +16,11 @@ class Controleur {
 		self::$CRUDAdapter = new PDOCRUDAdapter(self::$dbAdapter);
 	}
 	
-	/**
-	* charge le modèle corresponda
-	*/
 	
+	
+	/**
+	* charge le modèle correspondant
+	*/
 	public function loadModel($dbAdapterName)
 	{
 		if (self::$dbAdapter === null)
