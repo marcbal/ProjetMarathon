@@ -1,9 +1,4 @@
-	<body>
-
-			<header>
-				<img alt="header" src="./head4.png" /><!-- Image mappemonde -->
-			</header>
-
+			<h3>Contenu de la page d'accueil</h3>
 			<div id="contenu">
 				<div id="actu">
 					<p>Once upon a trip
