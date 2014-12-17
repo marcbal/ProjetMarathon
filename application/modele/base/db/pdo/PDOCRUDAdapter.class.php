@@ -73,12 +73,12 @@ class PDOCRUDAdapter implements CRUDAdapter {
         foreach($vars as $k=>$v) {
             $values[] = $instance->$k;
             if($first==false)
-                $sql = $sql .",";
-            $sql = $sql . "$k = ?";
+                $sql .= ",";
+            $sql .= "$k = ?";
             $first =false;
         }
         
-        $sql = $sql."WHERE id=?";
+        $sql .= " WHERE id=?";
         $values[] = $instance->getId();
         $this->pdodbadapter->prepare($sql);
         $this->pdodbadapter->execute($values);

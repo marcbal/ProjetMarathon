@@ -20,4 +20,15 @@ class Accueil extends Controleur{
 	}
 	
 	
+	public function a_propos($args)
+	{
+		$url_appli = 'accueil/a_propos';
+		
+		
+		require 'application/vue/_template/header.php';
+		//require 'application/vue/accueil/a_propos.php';
+		require 'application/vue/_template/footer.php';
+	}
+	
+	
 }

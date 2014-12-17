@@ -1,6 +1,6 @@
 <?php
 /**
-* Largement inspir� par panique-mvc
+* Largement inspiré par panique-mvc
 * @link https://github.com/panique/php-mvc
 */
 class Profil extends Controleur{
@@ -11,8 +11,134 @@ class Profil extends Controleur{
 	
 	public function index($args)
 	{
+		if (!Session::isLogin())
+			$this->login($args);
+		else
+		{
+			header('Location: '.URL.'actualite');
+			exit();
+		}
+	}
+	
+	
+	public function deconnexion($args)
+	{	// déconnexion puis redirection vers la page de login
+		Session::destroy();
+		header('Location: '.URL.'profil/login');
+		exit();
+	}
+	
+	
+	
+	public function login($args)
+	{	// ici la page de login
+		
+		$url_appli = 'profil/login';
+		
+		if (Session::isLogin())
+		{
+			header('Location: '.URL.'profil');
+			exit();
+		}
+		
+		echo '$args : ';
+		print_r($args);
+		
+		
+		require 'application/vue/_template/header.php';
+		//require 'application/vue/profillogin/index.php';
+		require 'application/vue/_template/footer.php';
+	}
+	
+	
+	
+	
+	public function loginCheck($args)
+	{
+		if (Session::isLogin())
+		{
+			echo 'Vous êtes déjà connecté';
+			return;
+		}
+		$mail = $_POST[''];
+		$pass = $_POST[''];
+		parent::loadModel('Users');
+		if(($r = Session::login($mail, $pass)) === true)
+			header('Location: '.URL.'profil');
+		else
+			header('Location: '.URL.'profil/login/'.$r);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public function edit($args)
+	{
+		if (!Session::isLogin())
+		{
+			header('Location: '.URL.'profil');
+			exit();
+		}
+		$id = Session::get('user_id');
+		
+		
+		$users = new UsersSQL();
+		$user = $users->findById($id)->execute();
+		$user=$user[0];
+		
+		
+		require 'application/vue/_template/header.php';
+		//require 'application/vue/profil/edit.php';
+		require 'application/vue/_template/footer.php';
 		
 	}
+	
+	
+	
+	
+	public function view($args)
+	{
+		$id = null;
+		if (Session::isLogin())
+			$id = Session::get('user_id');
+		
+		if (count($args)>0)
+			$id = intval($args[0]);
+		
+		
+		require 'application/vue/_template/header.php';
+		
+		
+		if ($id == null)
+		{
+			echo 'Précisez un identifiant d\'utilisateur';
+		}
+		else
+		{
+			//require 'application/vue/profil/view.php';
+		}
+		require 'application/vue/_template/footer.php';
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

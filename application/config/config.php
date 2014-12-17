@@ -8,3 +8,11 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'groupe8');
 define('DB_USER', 'groupe8');
 define('DB_PASS', 'tvF40a0N');
+
+
+
+
+// protection pour le login
+
+define('LOGIN_FAIL_MAX', 3);
+define('LOGION_FAIL_TIME', 5*60); // 5 minutes
