@@ -1,6 +1,6 @@
 <?php
 /**
-* Largement inspir� par panique-mvc
+* Largement inspiré par panique-mvc
 * @link https://github.com/panique/php-mvc
 */
 class Application {
