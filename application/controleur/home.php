@@ -1,23 +1,23 @@
 <?php
 /**
-* Largement inspiré par panique-mvc
+* Largement inspirï¿½ par panique-mvc
 * @link https://github.com/panique/php-mvc
 */
 class Home extends Controleur{
-	
+
 	public function __construct() {  }
-	
+
 	public function index($args)
 	{
 		$url_appli = 'home';
-		parent::loadModel('tache');
-		$tSQL = new TacheSQL();
-		$t = new Tache("bouh", "machin", "", "");
-		
-		
-		
-		
-		
+		parent::loadModel('utilisateur');
+		$tSQL = new UtilisateurSQL("Paul", "paul", "paul@paul.fr", 1);
+		$tSQL->save();
+
+
+
+
+
 		require 'application/vue/_template/header.php';
 		require 'application/vue/home/index.php';
 		require 'application/vue/_template/footer.php';

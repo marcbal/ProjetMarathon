@@ -11,7 +11,7 @@ class Voyage extends Table {
     parent::__construct();
     $this->titre = $titre;
     $this->description = $description;
-    $this->media_titre = $media_titre;
+    $this->id_media_titre = $media_titre;
     $this->en_ligne = 0;
     $thsi->id_auteur = $id_auteur;
   }
