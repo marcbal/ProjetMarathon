@@ -27,7 +27,6 @@ abstract class Table {
 
     public function save() {
         $this->crudAdapter->save($this);
-        $this->_isNew = false;
     }
     
 
@@ -36,7 +35,6 @@ abstract class Table {
      */
     public function delete() {
         $this->crudAdpater->delete($this);
-        $this->_isNew = true;
     }
     /**
      * Return the table name
@@ -60,17 +58,17 @@ abstract class Table {
      */
     
     public function getId() {
-        if($this->isNew())
-            return false;
         return $this->id;
     }
     
     /**
      * Change the id of the current element (only if it was not saved ie the instance was new)
+	 * or set the curent element as new if it deleted from database
      */
     public function setId($id) {
-        if($this->id===false)
-            $this->id = $id;
+        if(($this->id===false AND $id !== false)
+			OR ($this->id!==false AND $id === false))
+			$this->id = $id;
     }
     
 }

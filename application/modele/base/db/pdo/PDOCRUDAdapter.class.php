@@ -83,7 +83,7 @@ class PDOCRUDAdapter implements CRUDAdapter {
      * DELETE FROM ....
      */
     public function delete($instance) {
-        if($instance->isNew==false) {
+        if($instance->getId()===false) {
             return;
         }
         
@@ -93,6 +93,7 @@ class PDOCRUDAdapter implements CRUDAdapter {
         
         $this->pdodbadapter->prepare($sql);
         $this->pdodbadapter->execute(array($instance->getId()));
+        $instance->setId(false);
     }
 }
 
