@@ -10,10 +10,11 @@ class Home extends Controleur{
 	public function index($args)
 	{
 		$url_appli = 'home';
-		parent::loadModel('tache');
-		$tSQL = new TacheSQL();
-		$t = new Tache("bouh", "machin", "", "");
-		
+		parent::loadModel('commentaire');
+		parent::loadModel('etape');
+		parent::loadModel('media');
+		parent::loadModel('utilisateur');
+		parent::loadModel('voyage');
 		
 		
 		

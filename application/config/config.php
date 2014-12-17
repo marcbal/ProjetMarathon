@@ -5,6 +5,6 @@ setlocale(LC_TIME, 'fr_FR.utf8','fra'); // date en langue française, fr_FR
 define('URL', $_SERVER['CONTEXT_PREFIX'].'/');
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'marathon2014');
-define('DB_USER', 'marathon2014');
-define('DB_PASS', 'aE8Emfc9pJtfKdHf');
+define('DB_NAME', 'groupe8');
+define('DB_USER', 'groupe8');
+define('DB_PASS', 'tvF40a0N');
