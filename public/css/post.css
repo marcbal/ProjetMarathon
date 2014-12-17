@@ -1,0 +1,126 @@
+html {
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color: #2E4D59;
+}
+
+body{
+	background-color: #2E4D59;
+}
+
+header img {
+	width: 100%;
+}
+
+#contenu {
+	margin:50px auto;
+	background-color: #F9F9F9;
+	width:92%; 
+
+}
+
+#actu 
+{
+	padding-top:2vw;
+}
+
+#actu section
+{
+	width:92%;
+	background-color:#f9f9f9;
+	margin:0 auto 2vw;
+	font-family:"raleway",Arial,sans-serif;
+	padding:2vw 4vw;
+}
+
+#actu section h1
+{
+	font-size:2.5vw;
+	font-family:"dragon", "raleway", Arial, sans-serif;
+}
+
+#actu section .auteur
+{
+	font-size:1vw;
+	margin-left:3%;
+	margin-top:-0.9vw;
+}
+
+#actu section .auteur a 
+{
+	margin:0;
+	font-size:1vw;
+}
+
+#actu section > p
+{
+	font-size:1.2vw;
+	width:90%;
+	margin:1.5vw auto;
+	text-align:justify;
+}
+
+#actu section > a
+{
+	margin-left:5%;
+	font-size:1vw;
+}
+
+#actu section img {
+	width:40%;
+	margin-left:30%;
+
+}
+
+.comments
+{
+	margin-top:2vw;
+	background-color:#f1f1f1;
+	padding-bottom:1vw;
+}
+
+.comments h2
+{
+	padding-top:1vw;
+	padding-left:5%;
+	font-size:1.3vw;
+	padding-bottom:0.9vw;
+}
+
+.com
+{
+	border-top:rgba(0,0,0,0.3) 1px solid;
+	width:90%;
+	margin:0 auto;
+}
+
+.com h3, .com h3 a
+{
+	margin-left:2%;
+	font-size:1.1vw;
+}
+
+.com p
+{
+	font-size:1.2vw;
+	margin-left:3%;
+}
+
+
+
+color
+{
+	color:#4EA69D;
+}
+
+footer 
+{
+	padding:0.8vw;
+	background-color:#000000;
+	color:#f1f1f1;
+	font-size:0.8vw;
+	margin-top:0.09em; 
+	text-align: center; 
+	min-height:5%;
+}	
