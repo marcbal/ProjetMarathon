@@ -10,15 +10,12 @@ class Home extends Controleur{
 	public function index($args)
 	{
 		$url_appli = 'home';
-		parent::loadModel('commentaire');
-		parent::loadModel('etape');
-		parent::loadModel('media');
-		parent::loadModel('utilisateur');
-		parent::loadModel('voyage');
+		parent::loadModel('Commentaire');
+		parent::loadModel('Etape');
+		parent::loadModel('Media');
+		parent::loadModel('Users');
+		parent::loadModel('Voyage');
 		
-		
-		$tSQL = new Utilisateur("Paul", "paul", "paul@paul.fr", 1);
-		$tSQL->save();
 
 		require 'application/vue/_template/header.php';
 		require 'application/vue/home/index.php';

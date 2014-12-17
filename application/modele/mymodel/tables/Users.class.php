@@ -1,6 +1,6 @@
 <?php
 
-class Utilisateur extends Table {
+class Users extends Table {
   public $user_name;
   public $user_password_hash;
   public $user_email;

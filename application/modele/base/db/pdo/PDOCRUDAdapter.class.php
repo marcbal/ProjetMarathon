@@ -35,14 +35,20 @@ class PDOCRUDAdapter implements CRUDAdapter {
         $tableName = $instance->getTableName();
         
     
-        $sql = "INSERT INTO $tableName VALUES(NULL";
+        $sql = "INSERT INTO $tableName (id";
         
         $vars = get_class_vars(get_class($instance));
         $nb = count($vars);
+		
+		foreach ($vars as $k=>$v) {
+			$sql .= ','.$k;
+		}
+		
+		$sql .= ") VALUES(NULL";
         
         for($i = 0;$i<$nb;$i++)
-            $sql = $sql.",?";
-        $sql = $sql .")";
+            $sql .= ",?";
+        $sql .= ")";
 
         $values = array();
         foreach($vars as $k=>$v) {

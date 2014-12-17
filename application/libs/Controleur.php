@@ -25,8 +25,8 @@ class Controleur {
 	{
 		if (self::$dbAdapter === null)
 			$this->openDatabaseConnexion();
-		require_once('application/modele/mymodel/queries/' . strtolower($dbAdapterName) . 'SQL.class.php');
-		require_once('application/modele/mymodel/tables/' . strtolower($dbAdapterName) . '.class.php');
+		require_once('application/modele/mymodel/queries/' . $dbAdapterName . 'SQL.class.php');
+		require_once('application/modele/mymodel/tables/' . $dbAdapterName . '.class.php');
 	}
 	
 	public function __toString() {
