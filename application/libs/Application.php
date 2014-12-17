@@ -8,6 +8,10 @@ class Application {
 	private $url_action = null;
 	private $url_args = null;
 	public $url_appli;
+	
+	
+	
+	
 	public function __construct()
 	{
 		$this->splitUrl();
@@ -20,11 +24,17 @@ class Application {
 				$controleur->index($this->url_args);
 			}
 		} else {
-			require './application/controleur/home.php';
-			$home = new Home();
+			require './application/controleur/accueil.php';
+			$home = new Accueil();
 			$home->index(null);
 		}
 	}
+	
+	
+	
+	
+	
+	
 	private function splitUrl()
 	{
 		if (isset($_GET['url'])) {

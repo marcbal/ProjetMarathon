@@ -8,7 +8,23 @@ class Controleur {
 	public static $CRUDAdapter = null; 
 	function __construct()
 	{
+		Session::init();
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
+	
+	
+	
+	
+	
+	
 	
 	private function openDatabaseConnexion()
 	{
