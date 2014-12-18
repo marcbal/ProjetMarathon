@@ -118,4 +118,58 @@ class Session
 		return true;
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static function register($mail, $pass, $pass2, $user_name)
+	{
+		// vérification de la validité des champs
+		
+		if (!NeverTrustUserInput::checkEmail($mail))
+			return 'invalid_email';	// email non valide
+		
+		if (!NeverTrustUserInput::checkUsername($user_name))
+			return 'invalid_username';	// username non valide
+		
+		
+		if (!NeverTrustUserInput::checkPasswordValidity($pass))
+			return 'invalid_password';	// pass non valide
+		
+		if ($pass != $pass2)
+			return 'different_password';	// les 2 mots de passes différents
+		
+		
+		
+		
+		// on vérifie si le pseudo ou le mail existe dans la base de donnée
+		$users = new UsersSQL();
+		$user = $users->findByUser_email($mail)->execute();
+		if (count($user) != 0) return 'email_exist';
+			
+		$users = new UsersSQL();
+		$user = $users->findByUser_name($user_name)->execute();
+		if (count($user) != 0)
+			return 'username_exist';	// les 2 mots de passes différents
+		
+		
+		
+		
+		
+		// création d'un nouveau Users
+		$user = new Users($user_name, password_hash($pass, PASSWORD_DEFAULT), $mail);
+		$user->user_active=1;
+		$user->save();
+		
+		
+		
+		
+		
+	}
 }
