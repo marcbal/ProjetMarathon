@@ -13,7 +13,8 @@ class Voyage extends Table {
     $this->description = $description;
     $this->id_media_titre = $media_titre;
     $this->en_ligne = 0;
-    $thsi->id_auteur = $id_auteur;
+    $this->id_auteur = $id_auteur;
+
   }
 
   public function getMedia() {
@@ -44,5 +45,11 @@ class Voyage extends Table {
     if($this->id==false) return array();
     $etapeSQL = new EtapeSQL();
     return $etapeSQL->findById_voyage($this->id)->execute();
+  }
+
+  public function getAuteur(){
+  	$user = new UsersSQL();
+  	$user = $user->findById($this->id_auteur);
+  	return $user;
   }
 }
