@@ -3,7 +3,7 @@
 * Largement inspiré par panique-mvc
 * @link https://github.com/panique/php-mvc
 */
-class Voyage extends Controleur{
+class Voyages extends Controleur{
 
   public function __construct() {
     parent::__construct();
