@@ -1,12 +1,16 @@
 			<div id="contenu">
 
-				<!--<div id="form_nouveau_voyage">
-					<form action="" method="post" >
-
-					</form>
-				</div>-->
-
 				<div id="actu">
+
+					<div id="entete_profil">
+						<h1 id="titre_profil"><p>Profil de</p><color>Manzanax_x</color></h1> <!-- Nom de l'utilisateur dont on affiche le profil -->
+
+						<div id="form_nouveau_voyage"> <!-- Formulaire d'écriture d'un article -->
+							<form action="" method="post" >
+
+							</form>
+						</div>
+					</div>
 
 					<section>
 						<h1>Titre de l'article</h1>

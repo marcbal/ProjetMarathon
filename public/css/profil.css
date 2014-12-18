@@ -1,0 +1,265 @@
+@font-face {font-family: 'raleway'; src: url("font/Raleway-Regular.otf");}
+@font-face {font-family: 'dragon'; src: url("font/DragonisComing.otf");}
+
+/* ********** *\
+    Style de fond
+\* ********** */
+
+html,body
+{
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color: #2E4D59;
+	color:black;
+}
+
+/* ********** *\
+         Header
+\* ********** */
+
+header img 
+{
+	width: 100%;
+}
+
+
+/* ********** *\
+         Onglets
+\* ********** */
+
+nav
+{
+	position:absolute;
+	top:14vw;
+	font-size:1.5vw;
+	font-family:'raleway',Arial,sans-serif;
+	text-align:center;
+}
+
+nav a
+{
+	text-decoration:none;
+	transition: transform 0.2s ease;
+	-moz-transition: transform 0.2s ease;
+	-webkit-transition: transform 0.2s ease;
+	color:#4EA69D;
+}
+
+nav a:hover
+{
+	text-decoration:none;
+	color:#4EA69D;
+	transition: transform 0.2s ease;
+	-moz-transition: transform 0.2s ease;
+	-webkit-transition: transform 0.2s ease;
+	transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
+	border-bottom:1px solid #4EA69D;
+	border-top:1px solid #4EA69D;
+}
+
+nav .onglets_gauche
+{
+	position:absolute;
+	left:7vw;
+}
+
+nav .onglets_droit
+{
+	position:absolute;
+	left:81vw;
+}
+
+nav .onglet_accueil, nav .onglet_infos
+{
+	position:absolute;
+}
+
+nav .onglet_infos
+{
+	margin-left:2.4vw;
+}
+
+nav .onglet_profil
+{
+	position:absolute;
+	margin-top:8vw;
+	margin-left:1vw;
+}
+
+nav .onglet_deco
+{
+	position:absolute;
+	margin-top:8vw;
+}
+
+/* ********** *\
+        Contenu
+\* ********** */
+
+#contenu 
+{
+	margin-top:-100%;
+	background-color: #2E4D59;
+	padding-bottom:4vw;
+	width:100%;
+}
+
+
+/* ********** *\
+        En-tête
+\* ********** */
+
+#entete_profil
+{
+	background-color:#f9f9f9;
+	margin:0 auto 3vw;
+	width:90%;
+	padding-top:1.5vw;
+	padding-bottom:1.5vw;
+	border-radius:10vw;
+}
+
+#entete_profil #titre_profil
+{
+	text-align:center;
+	font-family:"raleway", Arial, sans-serif;
+	font-size:2.5vw;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:0;
+}
+
+#entete_profil #titre_profil p 
+{
+	margin:0;
+	margin-top:0.5vw;
+	font-size:1.5vw;
+}
+
+
+/* ********** *\
+        Articles
+\* ********** */
+
+#actu 
+{
+	padding-top:10vw;
+	width:92%;
+	margin:93% auto 0;
+}
+
+#actu section
+{
+	width:92%;
+	background-color:#f9f9f9;
+	margin:0 auto 2vw;
+	font-family:"raleway",Arial,sans-serif;
+	padding:2vw 4vw;
+}
+
+#actu section h1
+{
+	font-size:2.5vw;
+	font-family:"dragon", "raleway", Arial, sans-serif;
+}
+
+#actu section .auteur
+{
+	font-size:1vw;
+	margin-left:3%;
+	margin-top:-0.9vw;
+}
+
+#actu section .auteur a 
+{
+	margin:0;
+	font-size:1vw;
+}
+
+#actu section > p
+{
+	font-size:1.2vw;
+	width:90%;
+	margin:1.5vw auto;
+	text-align:justify;
+}
+
+#actu section > a
+{
+	margin-left:5%;
+	font-size:1vw;
+}
+
+.comments
+{
+	margin-top:2vw;
+	background-color:#f1f1f1;
+	padding-bottom:1vw;
+}
+
+.comments h2
+{
+	padding-top:1vw;
+	padding-left:5%;
+	font-size:1.3vw;
+	padding-bottom:0.9vw;
+}
+
+.comments form
+{
+	width:90%;
+	margin:0 auto 2vw;
+}
+
+.comments form textarea
+{
+	width:100%;
+	max-width:100%;
+}
+
+.com
+{
+	border-top:rgba(0,0,0,0.3) 1px solid;
+	width:90%;
+	margin:0 auto;
+}
+
+.com h3, .com h3 a
+{
+	margin-left:2%;
+	font-size:1.1vw;
+}
+
+.com p
+{
+	font-size:1.2vw;
+	margin-left:3%;
+	text-align:justify;
+}
+
+/* ********** *\
+     Pied de page
+\* ********** */
+
+color
+{
+	color:#4EA69D;
+}
+
+footer 
+{
+	padding:0.8vw 0;
+	background-color:#000000;
+	color:#f1f1f1;
+	font-size:0.8vw;
+	margin-top:0.09em; 
+	text-align: center; 
+	min-height:5%;
+	font-family:"raleway",Arial,sans-serif;
+}

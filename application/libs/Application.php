@@ -1,6 +1,6 @@
 <?php
 /**
-* Largement inspiré par panique-mvc
+* Largement inspirÃ© par panique-mvc
 * @link https://github.com/panique/php-mvc
 */
 class Application {
@@ -8,10 +8,10 @@ class Application {
 	private $url_action = null;
 	private $url_args = null;
 	public $url_appli;
-	
-	
-	
-	
+
+
+
+
 	public function __construct()
 	{
 		$this->splitUrl();
@@ -26,15 +26,15 @@ class Application {
 		} else {
 			require './application/controleur/accueil.php';
 			$home = new Accueil();
-			$home->index(null);
+			$home->portail(null);
 		}
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	private function splitUrl()
 	{
 		if (isset($_GET['url'])) {
