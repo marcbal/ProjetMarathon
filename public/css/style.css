@@ -1,0 +1,539 @@
+@font-face {font-family: 'raleway'; src: url("font/Raleway-Regular.otf");}
+@font-face {font-family: 'dragon'; src: url("font/DragonisComing.otf");}
+
+/* ********** *\
+    Style de fond
+\* ********** */
+
+html,body
+{
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color: #2E4D59;
+	color:black;
+}
+
+/* ********** *\
+         Header
+\* ********** */
+
+header img 
+{
+	width: 100%;
+}
+
+
+/* ********** *\
+         Onglets
+\* ********** */
+
+nav
+{
+	position:absolute;
+	top:14vw;
+	font-size:1.5vw;
+	font-family:'raleway',Arial,sans-serif;
+	text-align:center;
+}
+
+nav a
+{
+	text-decoration:none;
+	transition: transform 0.2s ease;
+	-moz-transition: transform 0.2s ease;
+	-webkit-transition: transform 0.2s ease;
+	color:#4EA69D;
+}
+
+nav a:hover
+{
+	text-decoration:none;
+	color:#4EA69D;
+	transition: transform 0.2s ease;
+	-moz-transition: transform 0.2s ease;
+	-webkit-transition: transform 0.2s ease;
+	transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
+	border-bottom:1px solid #4EA69D;
+	border-top:1px solid #4EA69D;
+}
+
+nav .onglets_gauche
+{
+	position:absolute;
+	left:7vw;
+}
+
+nav .onglets_droit
+{
+	position:absolute;
+	left:81vw;
+}
+
+nav .onglet_accueil, nav .onglet_infos
+{
+	position:absolute;
+}
+
+nav .onglet_infos
+{
+	margin-left:2.4vw;
+}
+
+nav .onglet_profil
+{
+	position:absolute;
+	margin-top:8vw;
+	margin-left:1vw;
+}
+
+nav .onglet_deco
+{
+	position:absolute;
+	margin-top:8vw;
+}
+
+/* ********** *\
+        Contenu
+\* ********** */
+
+#contenu 
+{
+	margin-top:-100%;
+	background-color: #2E4D59;
+	padding-bottom:4vw;
+	width:100%;
+}
+
+/* ********** *\
+   Fil d'actuallités
+\* ********** */
+
+#actu 
+{
+	padding-top:10vw;
+	width:92%;
+	margin:93% auto 0;
+}
+
+#actu section
+{
+	width:92%;
+	background-color:#f9f9f9;
+	margin:0 auto 2vw;
+	font-family:"raleway",Arial,sans-serif;
+	padding:2vw 4vw;
+}
+
+#actu section h1
+{
+	font-size:2.5vw;
+	font-family:"dragon", "raleway", Arial, sans-serif;
+}
+
+#actu section .auteur
+{
+	font-size:1vw;
+	margin-left:3%;
+	margin-top:-0.9vw;
+}
+
+#actu section .auteur a 
+{
+	margin:0;
+	font-size:1vw;
+}
+
+#actu section .dates
+{
+	font-size:1.6vw;
+	display:inline;
+}
+
+#actu section > p, #actu section li > p
+{
+	font-size:1.2vw;
+	width:90%;
+	margin:1.5vw auto;
+	text-align:justify;
+}
+
+#actu section li 
+{
+	list-style:square;
+	padding-top:1vw;
+	margin:2vw auto 0 -2vw;
+	border-top:1px rgba(0,0,0,0.3) solid;
+}
+
+#actu section > a
+{
+	margin-left:5%;
+	font-size:1vw;
+}
+
+#actu section img {
+	width:40%;
+	border:1px rgba(0,0,0,0.3) solid;
+	margin-left:30%;
+
+}
+
+.comments
+{
+	margin-top:2vw;
+	background-color:#f1f1f1;
+	padding-bottom:1vw;
+}
+
+.comments h2
+{
+	padding-top:1vw;
+	padding-left:5%;
+	font-size:1.3vw;
+	padding-bottom:0.9vw;
+}
+
+.comments form
+{
+	width:90%;
+	margin:0 auto 2vw;
+}
+
+.comments form textarea
+{
+	width:100%;
+	max-width:100%;
+}
+
+.com
+{
+	border-top:rgba(0,0,0,0.3) 1px solid;
+	width:90%;
+	margin:0 auto;
+}
+
+.com h3, .com h3 a
+{
+	margin-left:2%;
+	font-size:1.1vw;
+}
+
+.com p
+{
+	font-size:1.2vw;
+	margin-left:3%;
+	text-align:justify;
+}
+
+
+/* ********** *\
+     En-tête profil
+\* ********** */
+
+#entete_profil
+{
+	background-color:#f9f9f9;
+	margin:0 auto 3vw;
+	width:90%;
+	padding-top:1.5vw;
+	padding-bottom:1.5vw;
+	border-radius:10vw;
+}
+
+#entete_profil #titre_profil
+{
+	text-align:center;
+	font-family:"raleway", Arial, sans-serif;
+	font-size:2.5vw;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:0;
+}
+
+#entete_profil #titre_profil p 
+{
+	margin:0;
+	margin-top:0.5vw;
+	font-size:1.5vw;
+}
+
+#entete_profil a 
+{
+	text-align:center;
+	display:block;
+	font-family:"raleway", Arial, sans-serif;
+	font-size:1.2vw;
+}
+
+
+/* ********** *\
+     Écrire un article
+\* ********** */
+
+#actu #formulaire_ecriture_article
+{
+	font-size:1.2vw;
+	background-color:#f9f9f9;
+	font-family:"raleway",Arial,sans-serif;
+	padding:6vw 4vw 2vw;
+}
+
+#actu #description
+{
+	width:78vw;
+	max-width:78vw;
+	padding:1vw;
+}
+
+#actu #titre, #actu #titre_voyage
+{
+	font-size:2vw;
+	text-align:center;
+	margin-bottom:2vw;
+}
+
+#actu #supprimer_etape, #actu #ajouter_etape
+{
+	font-size:1vw;
+}
+
+#actu #formulaire_ecriture_article
+{
+	font-size:1.2vw;
+	background-color:#f9f9f9;
+	font-family:"raleway",Arial,sans-serif;
+	padding:6vw 4vw 2vw;
+}
+
+#actu #description
+{
+	width:78vw;
+	max-width:78vw;
+	padding:1vw;
+}
+
+#actu #titre, #actu #titre_voyage
+{
+	font-size:2vw;
+	text-align:center;
+	margin-bottom:2vw;
+}
+
+#actu #supprimer_etape, #actu #ajouter_etape
+{
+	font-size:1vw;
+}
+
+#formulaire_ecriture_article .etape
+{
+	margin-top:2vw;
+	background-color:#f1f1f1;
+	padding:2vw 4vw;
+	border-top:1px solid rgba(0,0,0,0.3);
+	border-bottom:1px solid rgba(0,0,0,0.3);
+}
+
+#formulaire_ecriture_article .etape textarea
+{
+	width:73vw;
+	max-width:73vw;
+	height:30vw;
+	margin-top:2vw;
+	padding:1vw;
+}
+
+#actu #formulaire_ecriture_article #valider_form
+{
+	margin:2vw auto 0;
+	text-align:center;
+	display:block;
+}
+
+#actu #formulaire_ecriture_article #valider_form #valider_voyage
+{
+	font-size:1.4vw;
+	margin:1.5vw 0 2vw;
+}
+
+
+/* ********** *\
+     Pied de page
+\* ********** */
+
+color
+{
+	color:#4EA69D;
+}
+
+footer 
+{
+	padding:0.8vw 0;
+	background-color:#000000;
+	color:#f1f1f1;
+	font-size:0.8vw;
+	margin-top:0.09em; 
+	text-align: center; 
+	min-height:5%;
+	font-family:"raleway",Arial,sans-serif;
+}
+
+/* ********** *\
+     Connexion
+\* ********** */
+
+#connexion_contenu p{
+	font-family:"raleway",Arial,sans-serif;
+	font-size:24px;
+	color:#000;
+}
+
+#connexion_contenu{
+	width:100%;	
+	text-align:center;
+	top:50%;
+	position:fixed;
+	margin-top:-100px;
+}
+
+#connexion_contenu .connex{
+	font-family:"raleway",Arial,sans-serif;
+	text-align:left;
+	padding:15px 20px;
+	margin-right:10px;
+	color:#00;
+	display:inline-block;
+	background-color:#f9f9f9;
+}
+
+#connexion_contenu a
+{
+	color:#f1f1f1;
+	font-family:"raleway",Arial,sans-serif;
+	text-decoration:none;
+	margin-top:1vw;
+	display:inline-block;
+	font-size:10pt;
+	transition:padding 0.15s ease,
+		transform 0.15s ease;
+	-moz-transition:padding 0.15s ease,
+		transform 0.15s ease;
+	-webkit-transition:padding 0.15s ease,
+		transform 0.15s ease;
+}
+
+#connexion_contenu a:hover
+{
+	text-decoration:underline;
+	transform:scale(1.2);
+	padding:0 10px;
+	transition:0.15s ease;
+	-moz-transition:0.15s ease;
+	-webkit-transition:0.15s ease;
+}
+
+#connexion_contenu body{
+	background-color:#2e4d59;
+}
+
+
+/* ********** *\
+     Inscription
+\* ********** */
+
+#inscription_contenu p{
+	font-family:"raleway",Arial,sans-serif;
+	font-size:24px;
+	color:#000;
+}
+
+#inscription_contenu{
+	width:100%;	
+	text-align:center;
+	top:50%;
+	position:fixed;
+	margin-top:-130px;
+}
+
+#inscription_contenu > table
+{
+	margin:0 auto;
+	vertical-align:middle;
+}
+
+#inscription_contenu .inscrip{
+	font-family:"raleway",Arial,sans-serif;
+	text-align:left;
+	color:#000;
+	display:inline-block;
+	background-color:#f9f9f9;
+	margin-left:10px;
+	padding:15px 20px;
+}
+
+#inscription_contenu a
+{
+	color:#f1f1f1;
+	font-family:"raleway",Arial,sans-serif;
+	text-decoration:none;
+	margin-top:1vw;
+	display:inline-block;
+	font-size:10pt;
+	transition:padding 0.15s ease,
+		transform 0.15s ease;
+	-moz-transition:padding 0.15s ease,
+		transform 0.15s ease;
+	-webkit-transition:padding 0.15s ease,
+		transform 0.15s ease;
+}
+
+#inscription_contenu a:hover
+{
+	text-decoration:underline;
+	transform:scale(1.2);
+	padding:0 10px;
+	transition:0.15s ease;
+	-moz-transition:0.15s ease;
+	-webkit-transition:0.15s ease;
+}
+
+#inscription_contenu body{
+	background-color:#2e4d59;
+}
+
+/* ********** *\
+        Infos
+\* ********** */
+
+#actu #trombi table	
+{
+	width: 8vw;
+	margin:0 auto;
+
+}
+
+#actu #trombi table td img
+{
+	margin:0 2.5vw;
+	border:1px solid rgba(0,0,0,0.3);
+	width:15vw;
+}
+
+#actu #trombi .nom
+{
+	font-family:"raleway", Arial, sans-serif;
+	text-align: center;
+}
+
+#actu #trombi h2
+{
+	font-size:2vw;
+	font-family:"dragon", "raleway", Arial, sans-serif;
+	margin-left:0.7vw;
+	border-bottom:solid black 1px;
+}

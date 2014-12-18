@@ -1,9 +1,6 @@
 <?php
 $etapes = $voyage->fetchAll()->orderBy("debut ASC");
 ?>
-
-  <div id="contenu">
-
     <div id="actu">
 
       <section>
@@ -19,4 +16,3 @@ $etapes = $voyage->fetchAll()->orderBy("debut ASC");
            </ul>
       </section>
     </div>
-  </div>
