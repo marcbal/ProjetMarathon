@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {font-family: 'raleway'; src: url("font/Raleway-Regular.otf");}
+@font-face {font-family: 'dragon'; src: url("font/DragonisComing.otf");}
+
+html,body
+{
+	height:100%;
+	margin:0;
+	padding:0;	
+}
+
+p{
+	font-family:"raleway",Arial,sans-serif;
+	font-size:24px;
+	color:#000;
+}
+
+.contenu{
+	width:100%;	
+	text-align:center;
+	top:50%;
+	position:fixed;
+	margin-top:-100px;
+}
+
+.connex{
+	font-family:"raleway",Arial,sans-serif;
+	text-align:left;
+	padding:15px 20px;
+	margin-right:10px;
+	color:#00;
+	display:inline-block;
+	background-color:#f9f9f9;
+}
+
+a
+{
+	color:#f1f1f1;
+	font-family:"raleway",Arial,sans-serif;
+	text-decoration:none;
+	margin-top:1vw;
+	display:inline-block;
+	font-size:10pt;
+	transition:padding 0.15s ease,
+		transform 0.15s ease;
+	-moz-transition:padding 0.15s ease,
+		transform 0.15s ease;
+	-webkit-transition:padding 0.15s ease,
+		transform 0.15s ease;
+}
+
+a:hover
+{
+	text-decoration:underline;
+	transform:scale(1.2);
+	padding:0 10px;
+	transition:0.15s ease;
+	-moz-transition:0.15s ease;
+	-webkit-transition:0.15s ease;
+}
+
+body{
+	background-color:#2e4d59;
+}
+
