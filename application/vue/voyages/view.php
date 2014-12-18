@@ -6,7 +6,7 @@
         <p class="auteur">Écrit par <a href="profil/view/<?php echo $voyage->id_auteur; ?>"><?php echo $user->user_name; ?></a></p>
         <p><?php echo nl2br(htmlentities($voyage->description)); ?></p>
 	  <ul>
-		
+
 		<?php foreach($etapes as $e) { ?>
 			<li><p class="dates"><b>Du <?php echo affiche_date_fr(strtotime($e->debut), false, 'm'); ?> au
 					<?php echo affiche_date_fr(strtotime($e->fin), false, 'm'); ?></b></p><br/>
