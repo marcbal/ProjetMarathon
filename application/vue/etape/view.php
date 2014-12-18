@@ -31,13 +31,15 @@
 	var sldrContent_href = new Array ();
 	
 	<?php
+		$i = 0;
 		foreach($medias as $media)
 		{
 			?>
-				sldrContent_img[0] = <?php echo $media->url; ?>;
-				sldrContent_html[0] = '';
-				sldrContent_href[0] = false;
+				sldrContent_img[<?php echo $i; ?>] = <?php echo $media->url; ?>;
+				sldrContent_html[<?php echo $i; ?>] = '';
+				sldrContent_href[<?php echo $i; ?>] = false;
 			<?php
+			$i++;
 		}
 		
 		
@@ -45,10 +47,6 @@
 	?>
 	
 	
-	/*
-	sldrContent_img[0] = 'http://assets.mc-pandacraft.net/pandacraft/assets/files/images_pages/slider_presentation.jpg';
-	sldrContent_html[0] = '<h3>Serveur Minecraft Pandacraft</h3><p>Serveur créatif, survie ou Faction, au choix ! Inscription rapide et gratuit sur le site. Protection anti-grief en survie et en créatif.</p>';
-	sldrContent_href[0] = false;*/
 </script>
 
 

@@ -39,7 +39,7 @@ class Etapes extends Controleur{
 		$etapes = new EtapeSQL();
 		$etape = $etapes->findById($etape_id);
 		
-		$medias = $etapes->getMedias();
+		$medias = $etape->getMedias();
 		
 		if ($etape === false)
 		{
