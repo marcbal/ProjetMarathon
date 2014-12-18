@@ -168,7 +168,7 @@ class Session
 		$user->user_active=1;
 		$user->save();
 		
-		
+		return true;
 		
 		
 		

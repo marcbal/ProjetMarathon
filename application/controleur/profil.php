@@ -43,12 +43,7 @@ class Profil extends Controleur{
 
 
 
-		require 'application/vue/_template/header.php';
-		echo '<!-- $args : ';
-		print_r($args);
-		echo ' -->';
 		require 'application/vue/profil/login.php';
-		require 'application/vue/_template/footer.php';
 	}
 
 
@@ -61,8 +56,8 @@ class Profil extends Controleur{
 			echo 'Vous êtes déjà connecté';
 			return;
 		}
-		$mail = $_POST[''];
-		$pass = $_POST[''];
+		$mail = $_POST['mail'];
+		$pass = $_POST['pass'];
 		parent::loadModel('Users');
 		if(($r = Session::login($mail, $pass)) === true)
 			header('Location: '.URL.'profil');
@@ -91,12 +86,7 @@ class Profil extends Controleur{
 
 
 
-		require 'application/vue/_template/header.php';
-		echo '<!-- $args : ';
-		print_r($args);
-		echo ' -->';
 		require 'application/vue/profil/register.php';
-		require 'application/vue/_template/footer.php';
 	}
 
 
@@ -107,10 +97,10 @@ class Profil extends Controleur{
 			echo 'Vous êtes déjà connecté';
 			return;
 		}
-		$mail = $_POST[''];
-		$pass = $_POST[''];
-		$pass2 = $_POST[''];
-		$username = $_POST[''];
+		$mail = $_POST['mail'];
+		$pass = $_POST['pass'];
+		$pass2 = $_POST['pass2'];
+		$username = $_POST['username'];
 		parent::loadModel('Users');
 		if(($r = Session::register($mail, $pass, $pass2, $username)) === true)
 			header('Location: '.URL.'profil');
