@@ -46,7 +46,7 @@ class Profil extends Controleur{
 
 
 		require 'application/vue/_template/header.php';
-		//require 'application/vue/profillogin/index.php';
+		require 'application/vue/profillogin/index.php';
 		require 'application/vue/_template/footer.php';
 	}
 
@@ -125,9 +125,9 @@ class Profil extends Controleur{
 		}
 		else
 		{
-		 require 'application/vue/login/view.php';
+		 require 'application/vue/profil/view.php';
 		}
-		require 'application/vue/_template/footer.php';
+		 require 'application/vue/_template/footer.php';
 	}
 
 

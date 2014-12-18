@@ -8,7 +8,8 @@
     <base href="<?php echo URL; ?>" />
     <link rel="stylesheet" href="public/css/bootstrap.css">
     <link rel="stylesheet" href="public/css/profil.css">
-    <link rel="stylesheet" href="public/css/accueil.css"> <!-- Lien vers le fichier style -->
+    <link rel="stylesheet" href="public/css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="public/css/connexion.css" />    <!-- Lien vers le fichier style -->
     <link rel="icon" type="image/png" href="public/img/favicon.png"/> <!-- Favicon du site -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta charset="utf-8" />
