@@ -9,6 +9,7 @@
 		<base href="<?php echo URL; ?>" />
 		<!-- Lien vers le fichier style -->
 		<link rel="stylesheet" href="public/css/style.css" />
+		<link rel="stylesheet" href="public/css/bootstrap.min.css" />
 		<link rel="icon" type="image/png" href="public/img/favicon.png"/> <!-- Favicon du site -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -29,7 +30,7 @@
         </div>
 
         <div class="onglets_droit">
-          <a class="onglet_infos" href="">Infos</a>
+          <a class="onglet_infos" href="accueil/a_propos">Infos</a>
 		  <?php if (Session::isLogin()) { ?>
           <a class="onglet_deco" href="profil/deconnexion">Déconnexion</a>
 		  <?php } else { ?>

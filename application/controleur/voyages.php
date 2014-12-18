@@ -30,10 +30,10 @@ class Voyages extends Controleur{
     $voyage = $voyages->findById($args[0]);
 
     $user = $voyage->getAuteur();
-	
-    
+
+
 	$etapes = $voyage->getEtapes();
-    
+
 	$commentaires = $voyage->getCommentaires();
 
     require 'application/vue/_template/header.php';
@@ -52,13 +52,21 @@ class Voyages extends Controleur{
   }
 
 	public function createCheck($args) {
-		
+    if(!isset($_POST)) {
+      header("Location:".URL."/voyages/create");
+      exit();
+    }
+
+    $voyage = new Voyage($_POST['titre_voyage'], $_POST['description'], Session::getId());
+    $voyage->en_ligne = (!empty($_POST["public"])?1:0);
+    $voyage->save();
 	}
-	
-	
-	
-	
+
+
+
+
 	public function commentCheck($args) {
+<<<<<<< HEAD
 		require 'application/vue/_template/header.php';
 		
 		if(count($args) == 0){
@@ -83,5 +91,8 @@ class Voyages extends Controleur{
 		$handlerComment->save();
 		
 		
+=======
+
+>>>>>>> 68ab2518995d4ea8dfd402b649e280388d7c2a5e
 	}
 }

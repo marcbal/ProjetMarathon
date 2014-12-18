@@ -2,12 +2,10 @@
 
 					<div id="entete_profil">
 						<h1 id="titre_profil"><p>Profil de</p><color><?php echo $user->user_name; ?></color></h1> <!-- Nom de l'utilisateur dont on affiche le profil -->
-
-						<div id="form_nouveau_voyage"> <!-- Formulaire d'écriture d'un article -->
-							<form action="" method="post" >
-
-							</form>
-						</div>
+						
+						<?php if (Session::get('user_id') == $user->getId()) { ?>
+						<p><a href="voyages/create">Créer un voyage</a> - <a href="profil/edit">Éditer le profil</a></p>
+						<?php } ?>
 					</div>
 					
 					<?php foreach ($voyages_profil as $voyage) {
