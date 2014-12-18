@@ -19,7 +19,7 @@ class Voyage extends Table {
 
   public function getCommentaires() {
     if($this->id==false) return array();
-    $sqlCommentaire = CommentaireSQL();
+    $sqlCommentaire = new CommentaireSQL();
     return $sqlCommentaire->findById_voyage($this->id)->execute();
 
   }

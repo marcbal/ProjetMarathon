@@ -4,13 +4,13 @@
       lang="fr"
       dir="ltr">
 	<head>
+		<meta charset="utf-8"/>
 		<title>Odysseus</title>
 		<base href="<?php echo URL; ?>" />
 		<!-- Lien vers le fichier style -->
 		<link rel="stylesheet" href="public/css/style.css" />
 		<link rel="icon" type="image/png" href="public/img/favicon.png"/> <!-- Favicon du site -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	</head>
 	<body>

@@ -1,6 +1,6 @@
 				<div id="actu">
 
-					<form action="voyages/newCheck" method="post" id="formulaire_ecriture_article" >
+					<form action="voyages/createCheck" method="post" id="formulaire_ecriture_article" >
 					<table>
 						<tr id="titre"><td colspan="2"><label>Titre du voyage : </label>
 						<input type="text" id="titre_voyage" placeholder="Mon odyssée" /></td></tr>

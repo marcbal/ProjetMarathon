@@ -24,7 +24,7 @@ class Profil extends Controleur{
 	public function deconnexion($args)
 	{	// déconnexion puis redirection vers la page de login
 		Session::destroy();
-		header('Location: '.URL.'profil/login');
+		header('Location: '.URL.'actualite');
 		exit();
 	}
 
@@ -160,14 +160,14 @@ class Profil extends Controleur{
 		
 		
 		parent::loadModel('Users');
-		parent::loadModel('Voyages');
+		parent::loadModel('Voyage');
 		
 		
 
 
 		$users = new UsersSQL();
 		$user = $users->findById($id);
-		$voyages_profil = $user->getVoyage();
+		$voyages_profil = $user->getVoyages();
 		
 		
 		

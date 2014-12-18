@@ -23,6 +23,8 @@ class Voyages extends Controleur{
 
     parent::loadModel("Voyage");
     parent::loadModel("Users");
+    parent::loadModel("Commentaire");
+    parent::loadModel("Etape");
 
     $voyages = new VoyageSQL();
     $voyage = $voyages->findById($args[0]);
@@ -30,26 +32,33 @@ class Voyages extends Controleur{
     $user = $voyage->getAuteur();
 	
     
+	$etapes = $voyage->getEtapes();
     
+	$commentaires = $voyage->getCommentaires();
 
     require 'application/vue/_template/header.php';
-    require 'application/vue/voyage/index.php';
+    require 'application/vue/voyages/view.php';
     require 'application/vue/_template/footer.php';
   }
 
-  public function new($args)
+  public function create($args)
   {
 
     $url_appli = 'voyage/view';
 
     require 'application/vue/_template/header.php';
-    require 'application/vue/voyage/index.php';
+    require 'application/vue/voyages/create.php';
     require 'application/vue/_template/footer.php';
   }
 
-	public function newCheck($args) {
-  if(!isset($_post()) {
-    header("Location ".URL."voyages/new");
-  }
-  else()
+	public function createCheck($args) {
+		
+	}
+	
+	
+	
+	
+	public function commentCheck($args) {
+		
+	}
 }

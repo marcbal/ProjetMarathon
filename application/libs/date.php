@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Codé par Marc Baloup
+	CodÃ© par Marc Baloup
 	
 	Extrait depuis un autre projet perso
 	
@@ -13,14 +13,14 @@
 	{
 		$time_affiche = intval($time_affiche);
 		$jours_semaine = array(1 => 'lundi',2 => 'mardi',3 => 'mercredi',4 => 'jeudi',5 => 'vendredi',6 => 'samedi',7 => 'dimanche');
-		$mois_annee = array(1 => 'janvier',2 => 'février',3 => 'mars',4 => 'avril',5 => 'mai',6 => 'juin',
-			7 => 'juillet',8 => 'août',9 => 'septembre',10 => 'octobre',11 => 'novembre',12 => 'décembre');
+		$mois_annee = array(1 => 'janvier',2 => 'fÃ©vrier',3 => 'mars',4 => 'avril',5 => 'mai',6 => 'juin',
+			7 => 'juillet',8 => 'aoÃ»t',9 => 'septembre',10 => 'octobre',11 => 'novembre',12 => 'dÃ©cembre');
 		
 		$time_actuel = time();
 		
-		// date affiché au survol
+		// date affichÃ© au survol
 		$date_complet = $jours_semaine[date('N',$time_affiche)] . ' ' . date('j', $time_affiche) . ' ' . $mois_annee[date('n',$time_affiche)] .
-						' ' . date('Y à H:i'.(($precision == 's')?':s':''), $time_affiche);
+						' ' . date('Y Ã  H:i'.(($precision == 's')?':s':''), $time_affiche);
 		
 		$return = '';
 		if ($html)
@@ -42,11 +42,11 @@
 				elseif ($time_diff > -3600*12) // dans 12h
 					$return .= 'dans ' . floor((-$time_diff)/(3600)) . ' heures';
 				elseif ($time_affiche <= mktime(23, 59, 59, date("n",$time_actuel), date("j",$time_actuel), date("Y",$time_actuel))) // aujourd'hui
-					$return .= 'aujourd\'hui à ' . date('H:i', $time_affiche);
+					$return .= 'aujourd\'hui Ã  ' . date('H:i', $time_affiche);
 				elseif ($time_affiche <= mktime(23, 59, 59, date("n",$time_actuel), date("j",$time_actuel)+1, date("Y",$time_actuel))) // demain
-					$return .= 'demain à ' . date('H:i', $time_affiche);
+					$return .= 'demain Ã  ' . date('H:i', $time_affiche);
 				elseif ($time_affiche <= mktime(0, 0, 0, date("n",$time_actuel), date("j",$time_actuel)+6, date("Y",$time_actuel))) // dans moins d'1 semaine
-					$return .= $jours_semaine[date('N',$time_affiche)] . date(' j à H:i'.(($precision == 's')?':s':''), $time_affiche);
+					$return .= $jours_semaine[date('N',$time_affiche)] . date(' j Ã  H:i'.(($precision == 's')?':s':''), $time_affiche);
 				else
 					$return .= $date_complet;
 			}
@@ -63,11 +63,11 @@
 			elseif ($time_diff < 3600*12) // ya moins de 12h
 				$return .= 'il y a ' . floor(($time_diff)/(3600)) . ' heures';
 			elseif ($time_affiche >= mktime(0, 0, 0, date("n",$time_actuel), date("j",$time_actuel), date("Y",$time_actuel))) // aujourd'hui
-				$return .= 'aujourd\'hui à ' . date('H:i', $time_affiche);
+				$return .= 'aujourd\'hui Ã  ' . date('H:i', $time_affiche);
 			elseif ($time_affiche >= mktime(0, 0, 0, date("n",$time_actuel), date("j",$time_actuel)-1, date("Y",$time_actuel))) // hier
-				$return .= 'hier à ' . date('H:i', $time_affiche);
+				$return .= 'hier Ã  ' . date('H:i', $time_affiche);
 			elseif ($time_affiche >= mktime(0, 0, 0, date("n",$time_actuel), date("j",$time_actuel)-6, date("Y",$time_actuel))) // ya moins d'1 semaine
-				$return .= $jours_semaine[date('N',$time_affiche)] . ' dernier à ' . date('H:i'.(($precision == 's')?':s':''), $time_affiche);
+				$return .= $jours_semaine[date('N',$time_affiche)] . ' dernier Ã  ' . date('H:i'.(($precision == 's')?':s':''), $time_affiche);
 			else
 				$return .= $date_complet;
 		}

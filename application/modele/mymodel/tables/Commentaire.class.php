@@ -15,4 +15,11 @@ class Commentaire extends Table {
     $this->date_post = $date_post;
     $this->evaluation = $evaluation;
   }
+  
+  
+  public function getAuteur(){
+  	$user = new UsersSQL();
+  	$user = $user->findById($this->id_personne);
+  	return $user;
+  }
 }

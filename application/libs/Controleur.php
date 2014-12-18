@@ -11,7 +11,7 @@ class Controleur {
 		Session::init();
 		
 		
-		
+		header( 'content-type: text/html; charset=utf-8' );
 		
 		
 		
