@@ -26,7 +26,7 @@ class Application {
 		} else {
 			require './application/controleur/accueil.php';
 			$home = new Accueil();
-			$home->portail(null);
+			$home->index(null);
 		}
 	}
 

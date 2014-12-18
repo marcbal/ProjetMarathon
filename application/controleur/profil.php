@@ -31,7 +31,7 @@ class Profil extends Controleur{
 
 
 	public function login($args)
-	{	// ici la page de login
+	{	// ici la page de login ET D'ENREGISTREMENT
 
 		$url_appli = 'profil/login';
 
@@ -46,7 +46,7 @@ class Profil extends Controleur{
 
 
 		require 'application/vue/_template/header.php';
-		//require 'application/vue/profil/login.php';
+		require 'application/vue/profil/login.php';
 		require 'application/vue/_template/footer.php';
 	}
 
@@ -72,30 +72,6 @@ class Profil extends Controleur{
 	
 	
 	
-	
-	
-	
-	
-	
-	public function register($args)
-	{	// ici la page d'enregistrement
-		
-		$url_appli = 'profil/register';
-		
-		if (Session::isLogin())
-		{
-			header('Location: '.URL.'profil');
-			exit();
-		}
-		
-		echo '$args : ';
-		print_r($args);
-		
-		
-		require 'application/vue/_template/header.php';
-		//require 'application/vue/profil/register.php';
-		require 'application/vue/_template/footer.php';
-	}
 	
 	
 	
@@ -174,7 +150,7 @@ class Profil extends Controleur{
 		}
 		else
 		{
-			//require 'application/vue/profil/view.php';
+			require 'application/vue/profil/view.php';
 		}
 		require 'application/vue/_template/footer.php';
 	}
