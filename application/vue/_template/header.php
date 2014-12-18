@@ -21,8 +21,8 @@
       <!-- Onglets -->
       <nav>
         <div class="onglets_gauche">
-          <a class="onglet_accueil" href="accueil.html">Accueil</a>
-          <a class="onglet_profil" href="profil.html">Profil</a> <!-- Renvoi vers NOTRE profil -->
+          <a class="onglet_accueil" href="accueil">Accueil</a>
+          <a class="onglet_profil" href="profil/view">Profil</a> <!-- Renvoi vers NOTRE profil -->
         </div>
 
         <div class="onglets_droit">
