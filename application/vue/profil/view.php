@@ -1,14 +1,9 @@
 					<div id="actu">
 
-					<div id="entete_profil">
-						<h1 id="titre_profil"><p>Profil de</p><color>Manzanax_x</color></h1> <!-- Nom de l'utilisateur dont on affiche le profil -->
-
-						<div id="form_nouveau_voyage"> <!-- Formulaire d'écriture d'un article -->
-							<form action="" method="post" >
-
-							</form>
+						<div id="entete_profil">
+							<h1 id="titre_profil"><p>Profil de</p><color>Manzanax_x</color></h1> <!-- Nom de l'utilisateur dont on affiche le profil -->
+							<a href="ecrire_article.html">Écrire un article</a> <!-- Lien vers page d'écriture d'article. Uniquement si c'est notre profil -->
 						</div>
-					</div>
 
 					<section>
 						<h1>Titre de l'article</h1>
