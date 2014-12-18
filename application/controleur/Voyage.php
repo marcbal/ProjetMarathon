@@ -27,11 +27,9 @@ class Voyage extends Controleur{
 
     $voyages = new Voyage();
     $voyage = $voyages->findById($args[0]);
-    $voyage = $voyage[0];
 
     $users = new Users();
     $user = $users->findById($voyage->id_auteur);
-    $user = $user[0];
 
 
     require 'application/vue/_template/header.php';
