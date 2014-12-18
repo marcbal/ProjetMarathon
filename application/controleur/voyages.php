@@ -52,12 +52,14 @@ class Voyages extends Controleur{
   }
 
 	public function createCheck($args) {
+
+    parent::loadModel("Voyage");
     if(!isset($_POST)) {
       header("Location:".URL."/voyages/create");
       exit();
     }
 
-    $voyage = new Voyage($_POST['titre_voyage'], $_POST['description'], Session::getId());
+    $voyage = new Voyage($_POST['titre_voyage'], $_POST['description'], Session::get("user_id"));
     $voyage->en_ligne = (!empty($_POST["public"])?1:0);
     $voyage->save();
 	}
