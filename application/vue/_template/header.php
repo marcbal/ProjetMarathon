@@ -32,4 +32,4 @@
       </nav>
 
     </header>
-    <div id="actu">
+    <div id="contenu">
