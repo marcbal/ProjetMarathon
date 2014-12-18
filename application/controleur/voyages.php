@@ -36,3 +36,20 @@ class Voyages extends Controleur{
     require 'application/vue/voyage/index.php';
     require 'application/vue/_template/footer.php';
   }
+
+  public function new($args)
+  {
+
+    $url_appli = 'voyage/view';
+
+    require 'application/vue/_template/header.php';
+    require 'application/vue/voyage/index.php';
+    require 'application/vue/_template/footer.php';
+  }
+
+public function newCheck($args) {
+  if(!isset($_post()) {
+    header("Location ".URL."voyages/new");
+  }
+  else()
+}
