@@ -20,7 +20,7 @@
 			<?php if (Session::isLogin()) { ?>
 				<form action="voyages/commentCheck/<?php echo $voyage->getId(); ?>" method="post" />
 				<!-- Formulaire d'écriture de commentaire accessible si on est connecté -->
-					<textarea placeholder="Écrire un message..." id="add_com"></textarea>
+					<textarea name="comment" placeholder="Écrire un message..." id="add_com"></textarea>
 					<br/><br/><center><input type="submit" value="Poster" /></center>
 				</form>
 			<?php }

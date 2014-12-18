@@ -22,4 +22,6 @@ class Commentaire extends Table {
   	$user = $user->findById($this->id_personne);
   	return $user;
   }
+  
+  
 }
