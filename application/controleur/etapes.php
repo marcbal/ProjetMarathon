@@ -35,8 +35,11 @@ class Etapes extends Controleur{
 		}
 		
 		parent::loadModel('Etape');
+		parent::loadModel('Media');
 		$etapes = new EtapeSQL();
 		$etape = $etapes->findById($etape_id);
+		
+		$medias = $etape->getMedias();
 		
 		if ($etape === false)
 		{

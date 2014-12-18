@@ -20,7 +20,7 @@
 		
 		// date affiché au survol
 		$date_complet = $jours_semaine[date('N',$time_affiche)] . ' ' . date('j', $time_affiche) . ' ' . $mois_annee[date('n',$time_affiche)] .
-						' ' . date('Y à H:i'.(($precision == 's')?':s':''), $time_affiche);
+						' ' . date('Y', $time_affiche);
 		
 		$return = '';
 		if ($html)

@@ -4,7 +4,7 @@
 						<h1 id="titre_profil"><p>Profil de</p><color><?php echo $user->user_name; ?></color></h1> <!-- Nom de l'utilisateur dont on affiche le profil -->
 						
 						<?php if (Session::get('user_id') == $user->getId()) { ?>
-						<p><a href="voyages/create">Créer un voyage</a> - <a href="profil/edit">Éditer le profil</a></p>
+						<p><a href="voyages/create">Créer un voyage</a></p>
 						<?php } ?>
 					</div>
 					
