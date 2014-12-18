@@ -107,6 +107,8 @@ class Profil extends Controleur{
 	public function view($args)
 	{
 		$id = null;
+		parent::loadModel("Users");
+		Session::login("wikip@worldwide.net", "coucou");
 		if (Session::isLogin())
 			$id = Session::get('user_id');
 
@@ -123,7 +125,7 @@ class Profil extends Controleur{
 		}
 		else
 		{
-			//require 'application/vue/profil/view.php';
+		 require 'application/vue/login/view.php';
 		}
 		require 'application/vue/_template/footer.php';
 	}

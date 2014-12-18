@@ -18,9 +18,6 @@ require_once('application/modele/base/db/DBAdapter.class.php');
 require_once('application/modele/base/db/pdo/PDOCRUDAdapter.class.php');
 require_once('application/modele/base/db/pdo/PDODBAdapter.class.php');
 
-
 $app = new Application();
-
-
 
 ?><!-- durée d'exécution : <?php echo (microtime(true)-$mtime_debut); ?> s -->
