@@ -41,11 +41,12 @@ class Profil extends Controleur{
 			exit();
 		}
 
-		echo '$args : ';
-		print_r($args);
 
 
 		require 'application/vue/_template/header.php';
+		echo '<!-- $args : ';
+		print_r($args);
+		echo ' -->';
 		require 'application/vue/profil/login.php';
 		require 'application/vue/_template/footer.php';
 	}
@@ -88,11 +89,12 @@ class Profil extends Controleur{
 			exit();
 		}
 
-		echo '$args : ';
-		print_r($args);
 
 
 		require 'application/vue/_template/header.php';
+		echo '<!-- $args : ';
+		print_r($args);
+		echo ' -->';
 		require 'application/vue/profil/register.php';
 		require 'application/vue/_template/footer.php';
 	}
