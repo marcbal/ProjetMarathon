@@ -69,9 +69,9 @@ class Profil extends Controleur{
 			header('Location: '.URL.'profil/login/'.$r);
 	}
 
-	
-	
-	
+
+
+
 
 
 
