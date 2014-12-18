@@ -1,6 +1,4 @@
-			<div id="contenu">
-
-				<div id="actu">
+					<div id="actu">
 
 					<div id="entete_profil">
 						<h1 id="titre_profil"><p>Profil de</p><color>Manzanax_x</color></h1> <!-- Nom de l'utilisateur dont on affiche le profil -->
@@ -94,4 +92,3 @@
 					</section>
 
 				</div>
-			</div>

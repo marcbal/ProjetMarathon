@@ -13,6 +13,13 @@ class Actualite extends Controleur{
 	{
 		$url_appli = 'actualite';
 
+
+		parent::loadModel('Voyage');
+		parent::loadModel('Users');
+		$voyages = new VoyageSQL();
+		$voyages = $voyages->findByen_ligne(1)->orderBy('id DESC')->limit(0, 5)->execute();
+			
+			
 		require 'application/vue/_template/header.php';
 		require 'application/vue/actualite/index.php';
 		require 'application/vue/_template/footer.php';

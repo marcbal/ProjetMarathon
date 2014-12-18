@@ -12,7 +12,7 @@ class Accueil extends Controleur{
 	public function index($args)
 	{
 		$url_appli = 'accueil';
-		
+
 		// pas de header et footer, déjà dans la page inclus ci-dessous
 		require 'application/vue/accueil/index.php';
 	}

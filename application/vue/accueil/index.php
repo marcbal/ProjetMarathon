@@ -4,12 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Odysseus</title>
-		 <link href="<?php echo URL; ?>public/css/index.css" rel="stylesheet">
+		<link href="<?php echo URL; ?>public/css/index.css" rel="stylesheet">
+
 		 <link rel="icon" type="image/png" href="<?php echo URL; ?>public/img/logo_1_rose-01.png"/> <!-- Favicon du site -->
 		 <base href="<?php echo URL; ?>" />
 	</head>
 
 	<body>
+		<img src="public/img/index.jpg" alt="" />
 		<div id="index">
 			<a href="actualite">
 				<div id="logo">
