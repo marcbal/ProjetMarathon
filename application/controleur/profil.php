@@ -134,13 +134,32 @@ class Profil extends Controleur{
 		parent::loadModel('Users');
 		
 		$users = new UsersSQL();
-		$user = $users->findById($id)->execute();
-		$user=$user[0];
+		$user = $users->findById($id);
 
 
 		require 'application/vue/_template/header.php';
-		//require 'application/vue/profil/edit.php';
+		require 'application/vue/profil/edit.php';
 		require 'application/vue/_template/footer.php';
+
+	}
+	
+	
+
+	public function editCheck($args)
+	{
+		if (!Session::isLogin())
+		{
+			header('Location: '.URL.'profil');
+			exit();
+		}
+		$id = Session::get('user_id');
+
+		parent::loadModel('Users');
+		
+		$users = new UsersSQL();
+		$user = $users->findById($id);
+
+
 
 	}
 

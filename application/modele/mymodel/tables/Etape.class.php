@@ -14,4 +14,14 @@ class Etape extends Table {
     $this->debut = $debut;
     $this->debut = $fin;
   }
+  
+  
+  
+  
+  public function getMedias() {
+    if($this->id==false) return array();
+    $sqlCommentaire = new MediaSQL();
+    return $sqlCommentaire->findById_etape($this->id)->execute();
+
+  }
 }

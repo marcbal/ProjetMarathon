@@ -8,10 +8,11 @@
 	  <ul>
 		
 		<?php foreach($etapes as $e) { ?>
-		<li><p class="dates"><b>Du <?php echo affiche_date_fr($e->debut, false, 'm'); ?> au
-				<?php echo affiche_date_fr($e->fin, false, 'm'); ?></b></p><br/>
-		  <p><?php echo htmlentities(substr($e->description, 0, 100))."..."; ?></p>
-		</li>
+			<li><p class="dates"><b>Du <?php echo affiche_date_fr(strtotime($e->debut), false, 'm'); ?> au
+					<?php echo affiche_date_fr(strtotime($e->fin), false, 'm'); ?></b></p><br/>
+			  <p><?php echo htmlentities(substr($e->description, 0, 200))."..."; ?></p>
+			  <p><a href="etapes/view/<?php echo $e->getId(); ?>">Voir la suite</a></p>
+			</li>
 		<?php } ?>
 	   </ul>
 	   <div class="comments">
