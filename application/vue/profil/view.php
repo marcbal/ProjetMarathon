@@ -11,7 +11,6 @@
 					</div>
 					
 					<?php foreach ($voyages_profil as $voyage) {?>
-					
 					<section>
 
 						<h1> <?php echo $voyage->titre; ?></h1>
