@@ -17,23 +17,6 @@ class Voyage extends Table {
 
   }
 
-  public function getMedia() {
-
-    if($this->media==false || $this->media->id!=$this->id_media_titre) {
-      $sql = new MediaSQL();
-      $this->etape = $sql->findById($this->id_media_titre);
-    }
-    return $this->etape;
-  }
-
-  public function getUser() {
-    if($this->user==false || $this->user->id!=$this->id_personne) {
-      $sql = new UsersSQL();
-      $this->user = $sql->findById($this->id_personne);
-    }
-    return $this->user;
-  }
-
   public function getCommentaires() {
     if($this->id==false) return array();
     $sqlCommentaire = CommentaireSQL();

@@ -9,11 +9,6 @@ class Accueil extends Controleur{
 		parent::__construct();
 	}
 
-	public function portail($args)
-	{
-		$url_appli = 'portail';
-	}
-
 	public function index($args)
 	{
 		$url_appli = 'accueil';

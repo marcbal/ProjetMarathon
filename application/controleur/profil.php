@@ -156,8 +156,6 @@ class Profil extends Controleur{
 	public function view($args)
 	{
 		$id = null;
-		parent::loadModel("Users");
-		Session::login("wikip@worldwide.net", "coucou");
 		if (Session::isLogin())
 			$id = Session::get('user_id');
 
@@ -176,7 +174,7 @@ class Profil extends Controleur{
 		{
 			require 'application/vue/profil/view.php';
 		}
-		 require 'application/vue/_template/footer.php';
+		require 'application/vue/_template/footer.php';
 	}
 
 
