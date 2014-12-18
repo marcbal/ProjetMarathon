@@ -68,14 +68,36 @@ class Profil extends Controleur{
 		else
 			header('Location: '.URL.'profil/login/'.$r);
 	}
+
 	
 	
 	
-	
-	
-	
-	
-	
+
+
+
+
+
+	public function register($args)
+	{	// ici la page d'enregistrement
+
+		$url_appli = 'profil/register';
+
+		if (Session::isLogin())
+		{
+			header('Location: '.URL.'profil');
+			exit();
+		}
+
+		echo '$args : ';
+		print_r($args);
+
+
+		require 'application/vue/_template/header.php';
+		//require 'application/vue/profil/register.php';
+		require 'application/vue/_template/footer.php';
+	}
+
+
 	public function registerCheck($args)
 	{
 		if (Session::isLogin())
@@ -93,20 +115,20 @@ class Profil extends Controleur{
 		else
 			header('Location: '.URL.'profil/register/'.$r);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public function edit($args)
 	{
 		if (!Session::isLogin())
@@ -134,6 +156,8 @@ class Profil extends Controleur{
 	public function view($args)
 	{
 		$id = null;
+		parent::loadModel("Users");
+		Session::login("wikip@worldwide.net", "coucou");
 		if (Session::isLogin())
 			$id = Session::get('user_id');
 
@@ -150,9 +174,13 @@ class Profil extends Controleur{
 		}
 		else
 		{
+<<<<<<< HEAD
 			require 'application/vue/profil/view.php';
+=======
+		 require 'application/vue/profil/view.php';
+>>>>>>> 909e9e681d32822d8b1d02f8929d7570685ba5dd
 		}
-		require 'application/vue/_template/footer.php';
+		 require 'application/vue/_template/footer.php';
 	}
 
 
