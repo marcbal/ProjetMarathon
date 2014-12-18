@@ -68,7 +68,6 @@ class Voyages extends Controleur{
 
 
 	public function commentCheck($args) {
-<<<<<<< HEAD
 		require 'application/vue/_template/header.php';
 		
 		if(count($args) == 0){
@@ -91,10 +90,5 @@ class Voyages extends Controleur{
 		
 		$handlerComment = new Commentaire($id,$args[0],$contenu);
 		$handlerComment->save();
-		
-		
-=======
-
->>>>>>> 68ab2518995d4ea8dfd402b649e280388d7c2a5e
 	}
 }

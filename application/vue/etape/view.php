@@ -16,7 +16,7 @@
 <!-- Slider -->
 
 
-<div id="index_slider" style="position: relative; overflow: hidden; display: none;">
+<div id="index_slider" style="position: relative; overflow: hidden; display: none; width: 100%; height: 60%;">
 	<div id="slider_elements" style=" overflow: hidden;">
 	
 	</div>
@@ -25,29 +25,29 @@
 
 </div>
 
-<script type="text/javascript">
-	var sldrContent_img = new Array ();
-	var sldrContent_html = new Array ();
-	var sldrContent_href = new Array ();
-	
-	<?php
-		$i = 0;
-		foreach($medias as $media)
-		{
-			?>
-				sldrContent_img[<?php echo $i; ?>] = <?php echo $media->url; ?>;
-				sldrContent_html[<?php echo $i; ?>] = '';
-				sldrContent_href[<?php echo $i; ?>] = false;
+		<script type="text/javascript">
+			var sldrContent_img = new Array ();
+			var sldrContent_html = new Array ();
+			var sldrContent_href = new Array ();
+			
 			<?php
-			$i++;
-		}
-		
-		
-		
-	?>
-	
-	
-</script>
+				$i = 0;
+				foreach($medias as $media)
+				{
+					?>
+						sldrContent_img[<?php echo $i; ?>] = "<?php echo $media->url; ?>";
+						sldrContent_html[<?php echo $i; ?>] = '';
+						sldrContent_href[<?php echo $i; ?>] = false;
+					<?php
+					$i++;
+				}
+				
+				
+				
+			?>
+			
+			
+		</script>
 
 
 
