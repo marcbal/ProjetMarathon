@@ -93,7 +93,7 @@ class Profil extends Controleur{
 
 
 		require 'application/vue/_template/header.php';
-		//require 'application/vue/profil/register.php';
+		require 'application/vue/profil/register.php';
 		require 'application/vue/_template/footer.php';
 	}
 
