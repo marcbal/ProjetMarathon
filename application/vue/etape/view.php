@@ -1,5 +1,5 @@
 <div id="contenu">
-	
+
 	<section>
 		<h1><?php echo $etape->intitule; ?></h1>
 		<p><a href="voyage/view/<?php echo $etape->id_voyage; ?>">Voir le voyage complet</a> -
@@ -9,5 +9,4 @@
 		<p><?php echo nl2br(htmlentities($etape->description)); ?></p>
 		<!-- commentaires -->
 	</section>
-	
 </div>
