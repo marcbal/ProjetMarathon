@@ -11,7 +11,7 @@
 
 	<body>
 		<div id="index">
-			<a href="profil/login">
+			<a href="actualite">
 				<div id="logo">
 					<img src="public/img/logo_1_cercle-03.png" alt="Odysseus" onmousedown="return false">
 					<img src="<?php echo URL; ?>public/img/logo_1_rose-01.png" alt="luda" id="logo_rose" onmousedown="return false">

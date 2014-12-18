@@ -2,17 +2,16 @@
 
 class Etape extends Table {
   public $intitule;
-  public $escription;
+  public $description;
   public $debut;
   public $fin;
-  public $id_voyage;
+  public $id_voyage=0;
 
-  public function __construct($titre="",$description="",$media_titre="",$en_ligne="") {
+  public function __construct($intitule="",$description="",$debut="",$fin="") {
     parent::__construct();
     $this->intitule = $intitule;
     $this->description = $description;
     $this->debut = $debut;
-    $this->fin = $fin;
-    $this->id_voyage = $id_voyage;
+    $this->debut = $fin;
   }
 }
