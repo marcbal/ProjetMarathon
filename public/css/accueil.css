@@ -1,11 +1,11 @@
-@font-face {font-family: 'raleway'; src: url("font/Raleway-Regular.otf");}
-@font-face {font-family: 'dragon'; src: url("font/DragonisComing.otf");}
+@font-face {font-family: 'raleway'; src: url("../font/Raleway-Regular.otf");}
+@font-face {font-family: 'dragon'; src: url("../font/DragonisComing.otf");}
 
 /* ********** *\
     Style de fond
 \* ********** */
 
-html 
+html
 {
 	margin:0;
 	padding:0;
@@ -17,7 +17,7 @@ html
          Header
 \* ********** */
 
-header img 
+header img
 {
 	width: 100%;
 }
@@ -26,7 +26,7 @@ header img
         Contenu
 \* ********** */
 
-#contenu 
+#contenu
 {
 	margin-top:-100%;
 	background-color: #2E4D59;
@@ -38,7 +38,7 @@ header img
    Fil d'actuallités
 \* ********** */
 
-#actu 
+#actu
 {
 	margin-top:93%;
 	padding-top:10vw;
@@ -66,7 +66,7 @@ header img
 	margin-top:-0.9vw;
 }
 
-#actu section .auteur a 
+#actu section .auteur a
 {
 	margin:0;
 	font-size:1vw;
@@ -130,13 +130,13 @@ color
 	color:#4EA69D;
 }
 
-footer 
+footer
 {
 	padding:0.8vw 0;
 	background-color:#000000;
 	color:#f1f1f1;
 	font-size:0.8vw;
-	margin-top:0.09em; 
-	text-align: center; 
+	margin-top:0.09em;
+	text-align: center;
 	min-height:5%;
 }
