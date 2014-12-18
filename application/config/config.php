@@ -16,3 +16,11 @@ define('DB_PASS', 'tvF40a0N');
 
 define('LOGIN_FAIL_MAX', 3);
 define('LOGION_FAIL_TIME', 5*60); // 5 minutes
+
+
+// nom d'utilisateur
+define('USERNAME_MAX_SIZE', 20);
+define('USERNAME_MIN_SIZE', 2);
+
+// mot de passe
+define('PASSWORD_MIN_SIZE', 8);
