@@ -174,11 +174,7 @@ class Profil extends Controleur{
 		}
 		else
 		{
-<<<<<<< HEAD
 			require 'application/vue/profil/view.php';
-=======
-		 require 'application/vue/profil/view.php';
->>>>>>> 909e9e681d32822d8b1d02f8929d7570685ba5dd
 		}
 		 require 'application/vue/_template/footer.php';
 	}
