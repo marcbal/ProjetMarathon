@@ -10,11 +10,10 @@ class Voyages extends Controleur{
   }
 
   public function index($args) {
-    this->view($args);
+    $this->view($args);
   }
 
-  public function view($args)
-  {
+  public function view($args){
     if(count($args)==0) {
       header("Location: ".URL."actualite");
       exit();
@@ -30,9 +29,12 @@ class Voyages extends Controleur{
 
     $users = new Users();
     $user = $users->findById($voyage->id_auteur);
-
+	
+    
+    
 
     require 'application/vue/_template/header.php';
     require 'application/vue/voyage/index.php';
     require 'application/vue/_template/footer.php';
   }
+}

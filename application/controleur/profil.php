@@ -34,6 +34,7 @@ class Profil extends Controleur{
 	{	// ici la page de login ET D'ENREGISTREMENT
 
 		$url_appli = 'profil/login';
+		
 
 		if (Session::isLogin())
 		{
@@ -138,7 +139,8 @@ class Profil extends Controleur{
 		}
 		$id = Session::get('user_id');
 
-
+		parent::loadModel('Users');
+		
 		$users = new UsersSQL();
 		$user = $users->findById($id)->execute();
 		$user=$user[0];
@@ -162,7 +164,25 @@ class Profil extends Controleur{
 		if (count($args)>0)
 			$id = intval($args[0]);
 
+		
+		
+		
+		parent::loadModel('Users');
+		parent::loadModel('Voyages');
+		
+		
 
+
+		$users = new UsersSQL();
+		$user = $users->findById($id);
+		$voyages_profil = $user->getVoyage();
+		
+		
+		
+
+		
+		
+		
 		require 'application/vue/_template/header.php';
 
 

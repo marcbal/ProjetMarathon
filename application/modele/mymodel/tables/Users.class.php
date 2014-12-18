@@ -15,4 +15,11 @@ class Users extends Table {
     $this->user_password_hash = $user_password_hash;
     $this->user_email = $user_email;
   }
+  
+  public function getVoyages(){
+  		$voyages = new VoyageSQL();
+  		$voyages = $voyages->findById_auteur($this->getId())->execute();
+  		return $voyages;
+  }
+  
 }
