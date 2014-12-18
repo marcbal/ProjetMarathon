@@ -1,7 +1,7 @@
 
-<footer>
-	<p class="copyright"><b>Copyright &copy <color>Odysseus</color> 2014</b></p>
-</footer>
+		<footer>
+			<p class="copyright"><b>Copyright &copy <color>Odysseus</color> 2014</b></p>
+		</footer>
 
-</body>
+	</body>
 </html>

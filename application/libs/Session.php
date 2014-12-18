@@ -113,8 +113,9 @@ class Session
 
 		Session::set('is_login', true);
 		Session::set('user_id', $user->getId());
-		//Session::set('user_name', $user->user_name());
-
+		Session::set('user_name', $user->user_name);
+		
+		
 		return true;
 
 	}
