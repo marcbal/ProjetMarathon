@@ -13,6 +13,14 @@ class Voyage extends Table {
     $this->description = $description;
     $this->id_media_titre = $media_titre;
     $this->en_ligne = 0;
-    $thsi->id_auteur = $id_auteur;
+    $this->id_auteur = $id_auteur;
+    
   }
+  
+  public function getAuteur(){
+  	$user = new UsersSQL();
+  	$user = $user->findById($this->id_auteur);
+  	return $user;
+  }
+  
 }
