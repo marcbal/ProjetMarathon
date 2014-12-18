@@ -62,39 +62,35 @@ class Voyages extends Controleur{
     $voyage = new Voyage($_POST['titre_voyage'], $_POST['description'], Session::get("user_id"));
     $voyage->en_ligne = (!empty($_POST["public"])?1:0);
     $voyage->save();
+    header("Location: ".URL."voyages/view/".$voyage->getId());
 	}
 
 
 
 
 	public function commentCheck($args) {
-<<<<<<< HEAD
 		require 'application/vue/_template/header.php';
-		
+
 		if(count($args) == 0){
 			echo '<h1> Erreur !!! <\h1>';
 			require 'application/vue/_template/footer.php';
 			exit();
 		}
-		
+
 		if(!isset($_POST['comment'])){
 			echo '<h1> Erreur !!! <\h1>';
 			require 'application/vue/_template/footer.php';
 			exit();
 		}
-		
+
 		$contenu = $_POST['comment'];
-		
+
 		parent::loadModel('Commentaire');
 		$id = Session::get('user_id');
-		
-		
+
+
 		$handlerComment = new Commentaire($id,$args[0],$contenu);
 		$handlerComment->save();
-		
-		
-=======
-
->>>>>>> 68ab2518995d4ea8dfd402b649e280388d7c2a5e
+    header("Location: ".URL."/voyages/view/".$args[0]);
 	}
 }
